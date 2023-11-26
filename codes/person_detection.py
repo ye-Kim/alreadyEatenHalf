@@ -23,7 +23,7 @@ def person_detection_body(img, img_show=False):
         plt.xticks([]), plt.yticks([])
         plt.show()
 
-    return num_people
+    return num_people, img
 
 def person_detection_face(img, img_show=False):
     face_cascade = cv2.CascadeClassifier(face_xml)
@@ -43,7 +43,7 @@ def person_detection_face(img, img_show=False):
         plt.xticks([]), plt.yticks([])
         plt.show()
 
-    return num_people
+    return num_people, img
 
 def person_detection_hog(img, img_show=False):
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
@@ -63,4 +63,4 @@ def person_detection_hog(img, img_show=False):
         plt.title("HOG image")
         plt.show()
 
-    return num_people
+    return num_people, img
