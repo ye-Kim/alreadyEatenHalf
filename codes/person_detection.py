@@ -3,7 +3,7 @@ import numpy as np
 import matplotlib.pyplot as plt 
 
 fullbody_xml = '../tool/haarcascade_fullbody.xml'
-face_xml = '../tool/haarcascade_frontalcatface_extended.xml'
+face_xml = '../tool/haarcascade_frontalface_default.xml'
 
 def person_detection_body(img, img_show=False):
     body_cascade = cv2.CascadeClassifier(fullbody_xml)
