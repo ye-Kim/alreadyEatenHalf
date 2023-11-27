@@ -1,6 +1,6 @@
 import cv2
 
-video_file = './video/sample_video1.mp4'
+video_file = '../data/sample_video1.mp4'
 
 cap = cv2.VideoCapture(video_file)
 
