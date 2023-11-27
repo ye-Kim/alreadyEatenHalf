@@ -1,5 +1,5 @@
 # alreadyEatenHalf
-OpenSourceSW Term-Project
+OpenSourceSW Term-Project   
 Team 43: 반은 먹었조
 
 ## Members
