@@ -30,4 +30,3 @@ def people_detect_video(video_path,detect_type):
     cap.release()
     out.release()
     return './data/output.avi'
-            
