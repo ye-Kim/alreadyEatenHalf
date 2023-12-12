@@ -2,10 +2,8 @@ import cv2
 import numpy as np 
 import matplotlib.pyplot as plt 
 
-fullbody_xml = '../tool/haarcascade_fullbody.xml'
-face_xml = '../tool/haarcascade_frontalface_default.xml'
-
 def person_detection_body(img, img_show=False):
+    fullbody_xml = 'tool/haarcascade_fullbody.xml'
     body_cascade = cv2.CascadeClassifier(fullbody_xml)
 
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
@@ -13,6 +11,9 @@ def person_detection_body(img, img_show=False):
     body = body_cascade.detectMultiScale(gray, 1.01, 6, minSize=(30, 30))
     
     num_people = len(body)
+
+    if len(body) == 0:
+        return 0, img
 
     for (bx, by, bw, bh) in body:
         cv2.rectangle(img, (bx, by), (bx+bw, by+bh), (255, 0, 0), 2)
@@ -26,6 +27,7 @@ def person_detection_body(img, img_show=False):
     return num_people, img
 
 def person_detection_face(img, img_show=False):
+    face_xml = 'tool/haarcascade_frontalface_default.xml'
     face_cascade = cv2.CascadeClassifier(face_xml)
 
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
@@ -33,6 +35,9 @@ def person_detection_face(img, img_show=False):
     face = face_cascade.detectMultiScale(gray, 1.01, 6, minSize=(30, 30))
     
     num_people = len(face)
+
+    if len(face) == 0:
+        return 0, img
 
     for (fx, fy, fw, fh) in face:
         cv2.rectangle(img, (fx, fy), (fx+fw, fy+fh), (0, 255, 0), 2)
@@ -52,6 +57,9 @@ def person_detection_hog(img, img_show=False):
     hog.setSVMDetector(cv2.HOGDescriptor_getDefaultPeopleDetector())
 
     detected, _ = hog.detectMultiScale(gray)
+
+    if len(detected) == 0:
+        return 0, img
 
     for (x, y, w, h) in detected:
         cv2.rectangle(img, (x, y, w, h), (0, 0, 255), 3)

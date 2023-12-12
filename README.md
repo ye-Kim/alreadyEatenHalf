@@ -22,13 +22,13 @@ Then, please run only ```main.py```.
 ```
 codes : functions and classes to use our 'main' code
 ㄴ class_person_detect.py
-ㄴ main.py
 ㄴ people_detect_video.py
 ㄴ person_detection.py
 ㄴ test_tools.ipynb : show result of person_detection's functions
 
 data : test data (image and video)
 ㄴ Lenna.png
+ㄴ output.avi : output of sample.mp4
 ㄴ sample.mp4
 ㄴ sample_video1.mp4
 ㄴ sample_video2.mp4
