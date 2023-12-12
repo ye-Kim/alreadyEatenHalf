@@ -1,5 +1,5 @@
-from person_detection import person_detection_body, person_detection_face, person_detection_hog, person_detection_YOLO 
-from people_detect_video import people_detect_video 
+from codes.person_detection import person_detection_body, person_detection_face, person_detection_hog, person_detection_YOLO 
+from codes.people_detect_video import people_detect_video 
 import cv2 
 
 class PersonDetection:
