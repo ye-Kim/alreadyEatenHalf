@@ -24,7 +24,7 @@ class PersonDetection:
         return num_people, img
 
     def person_detection_YOLO(self, img):
-        num_people, img = perosn_detection_YOLO(img, True)
+        num_people, img = person_detection_YOLO(img, True)
         return num_people, img 
 
     def people_detect_video(video_path, detect_type):
