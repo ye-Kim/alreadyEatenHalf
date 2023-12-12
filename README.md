@@ -40,7 +40,7 @@ tool : haarcascades xmls, configuration of YOLOv3
 ㄴ haarcascade_frontalface_default.xml
 ㄴ haarcascade_fullbody.xml
 ㄴ yolov3.cfg
-ㄴ yolov3.weights
+ㄴ yolov3.weights (not included; must be downloaded)
 ```
 
 ---
